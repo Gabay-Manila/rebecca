@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>レベッカのパスポート</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@300;400&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background-color: #0e0c0a;
+    color: #e8e0d0;
+    font-family: 'Noto Serif JP', serif;
+    line-height: 1.9;
+  }
+
+  /* TITLE PAGE */
+  .title-page {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .title-image {
+    width: 100%;
+    max-width: 800px;
+    display: block;
+    margin: 0 auto;
+    opacity: 0.95;
+  }
+
+  .title-meta {
+    text-align: center;
+    padding: 2rem 1rem 3rem;
+    letter-spacing: 0.2em;
+  }
+
+  .title-meta .series {
+    font-size: 0.75rem;
+    color: #8a7a5a;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+  }
+
+  .title-meta .author {
+    font-size: 0.8rem;
+    color: #6a5a3a;
+    font-family: 'Noto Sans JP', sans-serif;
+    margin-top: 0.5rem;
+  }
+
+  .divider {
+    width: 60px;
+    height: 1px;
+    background: #5a4a2a;
+    margin: 2rem auto;
+  }
+
+  /* SECTIONS */
+  .section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    border-top: 1px solid #1e1c18;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1.2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .section-number {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #3a2a0a;
+    line-height: 1;
+    font-family: 'Noto Serif JP', serif;
+  }
+
+  .section-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #c8a96a;
+    letter-spacing: 0.1em;
+    border-left: 2px solid #5a3a10;
+    padding-left: 1rem;
+  }
+
+  /* IMAGE LAYOUTS */
+  .image-full {
+    width: 100%;
+    border-radius: 2px;
+    display: block;
+    margin-bottom: 2.5rem;
+    border: 1px solid #1e1c18;
+  }
+
+  .image-left {
+    float: left;
+    width: 45%;
+    margin: 0 2rem 1.5rem 0;
+    border-radius: 2px;
+    border: 1px solid #1e1c18;
+  }
+
+  .image-right {
+    float: right;
+    width: 45%;
+    margin: 0 0 1.5rem 2rem;
+    border-radius: 2px;
+    border: 1px solid #1e1c18;
+  }
+
+  .clearfix::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  /* TEXT */
+  .body-text {
+    font-size: 0.95rem;
+    color: #d0c8b8;
+    font-family: 'Noto Serif JP', serif;
+    line-height: 2.1;
+    text-align: justify;
+  }
+
+  .body-text p {
+    margin-bottom: 1.4rem;
+  }
+
+  /* DIALOGUE */
+  .dialogue {
+    background: #131108;
+    border-left: 3px solid #5a3a10;
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    font-size: 0.92rem;
+    color: #e8d8a8;
+    line-height: 2;
+    font-style: italic;
+  }
+
+  /* SCENE BREAK */
+  .scene-break {
+    text-align: center;
+    color: #3a2a10;
+    letter-spacing: 0.5em;
+    font-size: 0.8rem;
+    margin: 3rem 0;
+  }
+
+  /* FINAL */
+  .finale {
+    background: #0a0806;
+    padding: 4rem 2rem;
+    text-align: center;
+    border-top: 1px solid #1e1c18;
+  }
+
+  .finale .passport-name {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: 0.4em;
+    color: #c8a96a;
+    margin: 2rem 0 1rem;
+    font-family: 'Noto Serif JP', serif;
+  }
+
+  .finale .closing {
+    font-size: 0.9rem;
+    color: #8a7a5a;
+    line-height: 2.2;
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: 'Noto Serif JP', serif;
+  }
+
+  .colophon {
+    text-align: center;
+    padding: 3rem 1rem;
+    font-size: 0.7rem;
+    color: #3a3028;
+    font-family: 'Noto Sans JP', sans-serif;
+    letter-spacing: 0.1em;
+  }
+
+  @media (max-width: 600px) {
+    .image-left, .image-right {
+      float: none;
+      width: 100%;
+      margin: 0 0 1.5rem 0;
+    }
+    .section-number { font-size: 2rem; }
+    .section { padding: 3rem 1.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TITLE PAGE -->
+<div class="title-page">
+  <img src="rebecca_img5_title.png" alt="タイトル" class="title-image">
+  <div class="title-meta">
+    <div class="series">ブレッドウィナー短編シリーズ</div>
+    <div class="divider"></div>
+    <div class="author">原作・監修：吉田達弘　／　執筆：ジェミニ</div>
+  </div>
+</div>
+
+<!-- SECTION 1 -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-number">1</div>
+    <div class="section-title">露見した『七回』の足跡</div>
+  </div>
+
+  <div class="clearfix">
+    <img src="rebecca_img4_documents.png" alt="入国管理局" class="image-right">
+    <div class="body-text">
+      <p>1988年、好景気の熱気が充満する東京入国管理局の薄暗いカウンターの奥で、ベテランの査証官が乾いた声で言った。</p>
+      <div class="dialogue">「旦那さん。お宅の奥さん、日本はこれが初めてじゃないですよ」</div>
+      <p>中堅不動産会社に勤める佐藤健一（32）は、隣に座る妻の顔を見た。そこには、錦糸町のパブで出会い、日本国内での婚姻届を済ませて、そのまま配偶者ビザへの変更申請にやってきた愛らしいフィリピン人女性「マリア」がいるはずだった。しかし、彼女はカタカタと小刻みに震え、膝の上で組んだ両手を強く握りしめていた。</p>
+      <div class="dialogue">「写真を見てください。これ、全部奥さんですね。ある時は『ルシア（18）』。そして、今お持ちの『マリア（21）』。本名はおそらく、この最初の調書にある『レベッカ』だ。6ヶ月のビザが切れる前に日本で次の申請を出し、一度フィリピンに帰国しては、マニラで別の偽造パスポートにすり替えてまた成田から入国する。それを繰り返して、旦那さんと知り合う前に、すでに過去7回も審査をくぐり抜けている」</div>
+      <p><strong>7回。</strong>健一の脳内で、自分が籍を入れた「マリア」という存在が砂のように崩れ落ちていく音がした。可哀想な外国人の女の子を、夜の世界の搾取から救い出してやったという男の薄っぺらいプライドが、査証官の容赦ない追及によって一瞬にして粉砕された。</p>
+    </div>
+  </div>
+
+  <div class="body-text">
+    <p>アパートに帰るなり、彼女は床に這いつくばって泣いた。15歳の時に死んだ幼馴染の出生証明書を買い、名前を偽って初めて成田をくぐったこと。ビザが切れてマニラのスラムへ戻るたび、飢えたきょうだいたちを生かすため、ブローカーに大金を払って新しい名前のパスポートを作り直し、何度も「別人のフリ」をして日本の夜へ舞い戻っていたこと。</p>
+    <div class="dialogue">「名前は嘘。でも、ケンイチを好きな気持ちだけは、本当ね……」</div>
+    <p>泣き崩れる彼女の姿を見て、健一は悟った。彼女は救いを待つ哀れな聖女などではない。家族を食わせるために自分の名前を2度も捨て、マニラと東京を往復しながら7回も日本の夜を生き抜いてきた、圧倒的な「戦士」なのだと。健一はすべてを飲み込んだ。彼女の過去も、嘘も、すべてを引き受けて本当の「レベッカ」として、日本で共に生きていく覚悟を決めた。それが、二人の幸せな結末になるはずだった。</p>
+  </div>
+</div>
+
+<div class="scene-break">◆　◆　◆</div>
+
+<!-- SECTION 2 -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-number">2</div>
+    <div class="section-title">ネオンの引力、壊れる型枠</div>
+  </div>
+
+  <img src="rebecca_img3_kinshicho.png" alt="錦糸町のネオン" class="image-full">
+
+  <div class="body-text">
+    <p>しかし、本当の現実はここからだった。</p>
+    <p>無事に配偶者ビザを手に入れ、昼のスーパーのパートを始めたレベッカだったが、日本の「普通の生活」は、彼女にとってあまりにも退屈で、何より稼げる金額が少なすぎた。マニラの実家からは、相変わらず「屋根が壊れた」「妹が病気になった」と、容赦のない仕送りの催促が届く。</p>
+    <div class="dialogue">「昼の仕事、一ヶ月がんばっても、パブの一晩のチップより少ないね」</div>
+    <p>バブルの狂乱が残る錦糸町や赤坂のネオンが、レベッカの視界を激しく刺激する。ドレスを着て、男たちの横で微笑むだけで、大金が動くあの世界。大黒柱（ブレッドウィナー）としての重責を15歳から背負ってきた彼女にとって、地道に10万円を稼ぐ主婦の枠は、あまりにも狭すぎた。</p>
+    <div class="dialogue">「ちょっとだけ、お友達のお店手伝うね」</div>
+    <p>夜の世界への復帰は簡単だった。最初は週に一度の約束が、やがて毎日になり、客との朝帰りが日常になった。</p>
+    <div class="dialogue">「レベッカ、もう金は俺が稼ぐから店をやめてくれ！」</div>
+    <p>健一がどれほど髪を振り乱して懇願しても、彼女の耳には届かなかった。一度夜の味を占め、家族の命を両肩に載せた女の疾走は、誰にも止められない。</p>
+    <div class="dialogue">「ケンイチは優しい。でも、優しいだけじゃ、マニラの家族は生きていけない」</div>
+    <p>二人の心の歯車は完全に噛み合わなくなった。結婚からわずか3年、バブルの終焉とともに、二人は離婚届を出した。</p>
+  </div>
+</div>
+
+<div class="scene-break">◆　◆　◆</div>
+
+<!-- SECTION 3 -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-number">3</div>
+    <div class="section-title">漆黒の十年、そして覚悟の出頭</div>
+  </div>
+
+  <div class="clearfix">
+    <img src="rebecca_img2_immigration.png" alt="入国管理局への出頭" class="image-left">
+    <div class="body-text">
+      <p>離婚によって配偶者ビザを失ったレベッカに残された道は、日本に不法残留する「オーバーステイ」の闇に潜ることだけだった。</p>
+      <p>そこからの10年間は、文字通り泥まみれの逃亡劇だった。入管や警察の影に怯えながら、名前を変え、店を変え、北関東の寂れたスナックから小名浜のドヤ街まで、夜の蝶としてしぶとく生き延びた。2000年代に入り、政府の取り締まりが急激に厳しくなると、かつてのバブルの華やかさは消え失せ、不法就労の外国人への風当たりは氷のように冷たくなった。</p>
+      <p>ある冬の夜、地方の古びたアパートの洗面台で、レベッカは鏡を見た。そこには、厚い化粧では隠しきれない深いシワと、疲れ果てた女の顔があった。若さはとうに消費され尽くし、体はボロボロだった。携帯電話の画面を見る。マニラのマルコから届いた写真には、彼女の仕送りによって大学を卒業し、立派なスーツを着て笑う弟たちの姿があった。</p>
+      <div class="dialogue">「外はもう寒い。私の仕事も、もう終わったね」</div>
+    </div>
+  </div>
+
+  <div class="body-text">
+    <p>レベッカは静かに微笑み、みすぼらしいボストンバッグ一つを握りしめた。</p>
+    <p>翌朝、彼女は自ら東京入国管理局へ出頭した。身柄を拘束され、強制送還の手続きが進む灰色の部屋。冷たいパイプ椅子に座りながら、彼女の脳裏に去来したのは、かつて自分の偽名をすべて包み込んで泣いてくれた、健一のあの日の優しい顔だった。</p>
+    <div class="dialogue">「ケンイチ、私、約束守れなくてごめんなさい。でも、私は私の家族を全員守ったよ」</div>
+  </div>
+</div>
+
+<div class="scene-break">◆　◆　◆</div>
+
+<!-- SECTION 4 / FINALE -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-number">4</div>
+    <div class="section-title">結末：本当のパスポート</div>
+  </div>
+
+  <img src="rebecca_img1_reunion.png" alt="マニラでの再会" class="image-full">
+
+  <div class="body-text">
+    <p>成田発マニラ行きの航空機が、ニノイ・アキノ国際空港の滑走路に激しい音を立てて着陸した。タラップを降りると、全身を濡らすようなマニラの懐かしい熱気と、排気ガスの匂いがレベッカを迎えた。強制送還のゲートをくぐり、一般の到着ロビーへ出る。</p>
+    <div class="dialogue">「アテ（お姉ちゃん）！」</div>
+    <p>人混みの向こうから、立派な大人になった弟や妹たちが、涙を流しながら走ってきた。彼らはボロボロになったレベッカを、ちぎれんばかりの力で抱きしめた。その背後には、彼女が送った金で建てられた、コンクリート造りの頑丈な家が待っている。日本での長きに及ぶ戦いで、彼女はすべてを失い、日本を追われた。しかし、ここには彼女が命を削って建てた、揺るぎない家族の未来があった。</p>
+    <p>騒がしいロビーの片隅で、レベッカは手元にある一冊の冊子を見つめた。それは、日本国内で都合よく回されていた「ルシア」でも「マリア」でもない。</p>
+  </div>
+</div>
+
+<!-- FINALE -->
+<div class="finale">
+  <div class="passport-name">『 REBECCA 』</div>
+  <div class="divider"></div>
+  <div class="closing">
+    <p>彼女の本当の名前と、正しい生まれ年だけが刻まれた、フィリピン共和国の真っ新なパスポート。</p>
+    <br>
+    <p>偽りの名前で駆け抜けた日本のギラギラとした夜に、心からのグッバイを告げて。</p>
+    <br>
+    <p>レベッカは、本当の自分の名前を取り戻した顔で、マニラの夕暮れの風の中を、家族と共に堂々と歩き始めた。</p>
+  </div>
+  <div class="divider"></div>
+</div>
+
+<div class="colophon">
+  レベッカのパスポート　―　ブレッドウィナー短編シリーズ<br>
+  原作・監修：吉田達弘　／　執筆：ジェミニ　／　校正：ソネットくん<br>
+  © Yoshida EdTech Works　Manila / Nagoya
+</div>
+
+</body>
+</html>
